@@ -8,13 +8,13 @@ import java.util.List;
 
 @JsonIgnoreProperties
 public record EmployeeRequest(
-    List<Employee> employees
+        List<Employee> employees
 ) {
     @JsonIgnoreProperties
     public record Employee(
-        long id,
-        LocalDateTime dateStart,
-        LocalDateTime dateEnd
+            long id,
+            LocalDateTime dateStart,
+            LocalDateTime dateEnd
     ) {
         public Employee {
             if (dateStart.isAfter(LocalDateTime.now())) {

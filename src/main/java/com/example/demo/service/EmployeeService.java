@@ -32,7 +32,7 @@ public class EmployeeService {
 
         Duration duration = employeeWithMaxWorkDuration.getValue();
         long sec = duration.getSeconds();
-
+        System.out.println("Хуй коняЭ");
         return new EmployeeResponse(employeeWithMaxWorkDuration.getKey(),
             String.format(responseFormat, sec / 3600, (sec % 3600) / 60, sec % 60));
     }
